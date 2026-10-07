@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      CERTIFLOW_PUBLIC_BASE_URL: http://localhost:8000
+    volumes:
+      - certiflow-data:/app/data
+
+volumes:
+  certiflow-data:
+
